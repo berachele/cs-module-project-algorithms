@@ -4,15 +4,11 @@ Returns: a List of integers
 '''
 def moving_zeroes(arr):
     # Your code here
-    for i in arr:
-        if i == 0:
-            print(f'IF--> i: {i}')
-            print(arr)
-            arr[i], arr[i+1] = arr[i+1], arr[i]
-            print(f'i after next: {i}')
-        else:
-            print(f'Else--> i: {i}')
-            arr[i] = arr[i]
+    length = len(arr)
+    for i in range(length-1):
+        for checked_index in range(0, length-i-1):
+            if arr[checked_index] == 0:
+                arr[checked_index], arr[checked_index+1] = arr[checked_index+1], arr[checked_index]
     return arr
 
 
