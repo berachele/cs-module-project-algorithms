@@ -7,13 +7,13 @@ def product_of_all_other_numbers(arr):
     newArr = [1] * len(arr)
     product = 1
     for i in range(len(arr)):
-        print(f'{product}, {newArr}')
+        # print(f'{product}, {newArr}')
         newArr[i] *= product
         product *= arr[i]
 
     product = 1
     for i in range(len(arr) -1, -1, -1):
-        print(f'2nd Loop: {product}, {newArr}')
+        # print(f'2nd Loop: {product}, {newArr}')
         newArr[i] *= product
         product *= arr[i]
 
