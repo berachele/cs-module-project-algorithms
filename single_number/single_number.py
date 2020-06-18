@@ -4,11 +4,18 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    # for elem in arr:
+    #     if arr.count(elem) > 1:
+    #         pass
+    #     else:
+    #         return elem
+    s = set()
     for elem in arr:
-        if arr.count(elem) > 1:
-            pass
+        if elem in s:
+            s.remove(elem)
         else:
-            return elem
+            s.add(elem)
+    return list(s)[0]
 
 
 if __name__ == '__main__':
