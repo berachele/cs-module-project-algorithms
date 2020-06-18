@@ -8,11 +8,10 @@ def sliding_window_max(nums, k):
     max = 0
     for i in range(len(nums) - k + 1):
         max = nums[i]
-
-    for x in range(1, k):
-        if nums[i + x] > max:
-            max = nums[i + x]
-            maxArray.append(max)
+        for x in range(1, k):
+            if nums[i + x] > max:
+                max = nums[i + x]
+                maxArray.append(max)
     return maxArray
 
 if __name__ == '__main__':
