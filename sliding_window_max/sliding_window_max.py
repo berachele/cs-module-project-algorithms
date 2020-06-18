@@ -6,14 +6,17 @@ def sliding_window_max(nums, k):
     # Your code here
     max_window = []
     for i in range(len(nums) - k + 1):
-        if i > i +1:
-            print('hitting IF')
+        # for x in range(1, k):
+        if arr[i] > arr[i] +1:
+            # print('hitting IF')
+            # print(f'arr[i]: {arr[i]}')
             max = arr[i]
+            # print(f'max: {max}')
             max_window.append(max)
-        else:
-            print('hitting ELSE')
-            print(f'i: {i}')
-            pass
+        # else:
+        #     # print('hitting ELSE')
+        #     # print(f'arr[i]: {arr[i]}')
+        #     pass
     return max_window
 
 if __name__ == '__main__':
